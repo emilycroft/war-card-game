@@ -5,7 +5,7 @@ class Player {
   }
 
   addCards(card) {
-    this.hand.push(card)
+    this.hand.push(...card)
   }
 
 }
