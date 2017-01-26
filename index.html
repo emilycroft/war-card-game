@@ -2,12 +2,41 @@
 <html>
 <head>
   <title>AWESOME GAME</title>
+  <script type="text/javascript" src='js/controllers/gameController.js'></script>
+  <script type="text/javascript" src='js/controllers/playerController.js'></script>
   <script type="text/javascript" src='js/player.js'></script>
+
   <script type="text/javascript" src='js/deck.js'></script>
   <script type="text/javascript" src='js/card.js'></script>
   <script type="text/javascript" src='js/game.js'></script>
 </head>
 <body>
 
+<button id="nextRound">Next Round</button>
+
+<div id="status">
+</div>
+
+<div id="playerOne">
+  <h2>Player One</h2>
+  <span class="card-count"> </span> 
+  <div class="played-card"></div>
+</div>
+
+
+<div id="playerTwo">
+  <h2>Player Two</h2>
+  <span class="card-count"> </span> 
+  <div class="played-card"></div> 
+
+</div>
+
+
 </body>
+
+<script>
+  var controller = new GameController(),
+      playerOneController = new PlayerController('playerOne'),
+      playerTwoController = new PlayerController('playerTwo');
+</script>
 </html>
