@@ -1,5 +1,5 @@
 const suits = ["clubs", "spades", "hearts", "diamonds"]
-const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']
+const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace']
 //
 
 class Game {
@@ -26,10 +26,10 @@ class Game {
     playerTwoController.showCard(shownCardTwo)
     if (shownCardOne.defaultValue > shownCardTwo.defaultValue) {
       this.playerOne.addCards([shownCardOne, shownCardTwo])
-      controller.updateStatus("Yay for player 1")
+      controller.updateStatus("Player 1 won this round")
     } else if (shownCardOne.defaultValue < shownCardTwo.defaultValue) {
       this.playerTwo.addCards([shownCardOne, shownCardTwo])
-      controller.updateStatus("Yay for player 2")
+      controller.updateStatus("Player 2 won this round")
     } else if (shownCardOne.defaultValue === shownCardTwo.defaultValue) {
       this.playerOne.addCards([shownCardOne])
       this.playerTwo.addCards([shownCardTwo])
